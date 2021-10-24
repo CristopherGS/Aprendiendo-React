@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap');
+* {
+    font-family: 'Zen Kurenaido', sans-serif;
+}
+body {
+  padding: 60px;
+}
+input {
+  width: 100%;
+  font-size: 1.5rem;
+  color: grey;
+}
