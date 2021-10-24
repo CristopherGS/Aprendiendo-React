@@ -10,4 +10,8 @@ const divRoot = document.querySelector('#root');
 
 
 // ReactDOM.render( <PrimeraApp saludo="Titulo H1" /> , divRoot);
-ReactDOM.render( <CounterApp numero={1} /> , divRoot);
+ReactDOM.render( <CounterApp  /> , divRoot);
+
+
+
+//! me quede en la clase 16
