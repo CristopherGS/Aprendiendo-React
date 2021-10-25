@@ -10,3 +10,18 @@ input {
   font-size: 1.5rem;
   color: grey;
 }
+
+.cardPadre {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.card{
+  width: 350px;
+  text-align: center;
+  border: black 1px solid;
+}
+
+.card img {
+  max-height: 190px;
+}

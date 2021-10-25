@@ -1,26 +1,32 @@
 import { useState } from "react";
 import { AddCategory } from "./components/AddCategory";
+import { TrgetaGig } from "./components/TrgetaGig";
 
 
 
 const GifExpertApp = () => {
-    // const category = ["One Piece", "Samurai x"];
-    const [category, setCategory] = useState(["One Piece", "Samurai x"]);
 
-    // const insertCategory = () => {
-    //     setcategory((arr) =>  [...arr, 'Nuevo valor'] );
-    // };
+    const [category, setCategory] = useState(["One Punch"]);
+
     return (
         <>
-            <h2>GifExpert APP</h2> 
-            <AddCategory setCategory={setCategory}/>
+            <h2>GifExpert APP</h2>
+            <AddCategory setCategory={setCategory} />
             <hr />
             <ol>
-                {category.map((category) => {
-                    return <li key={category}>{category}</li>;
-                })}
+                {
+                    category.map( (category) =>
+                        <TrgetaGig 
+                            key={category}
+                            category={category}
+                        />
+                    )
+                }
             </ol>
         </>
     );
 };
 export default GifExpertApp;
+
+
+//!VIDEO 13
