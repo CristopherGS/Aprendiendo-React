@@ -14,7 +14,7 @@ export const AddCategory = ({ setCategory }) => {
     const sumbit = (e) => {
         e.preventDefault();
         if(valorinput.trim().length > 2){
-            setCategory( arr => [...arr, valorinput] );
+            setCategory( arr => [valorinput,...arr ] );
             setInputValue('')
         }
     };

@@ -1,19 +1,11 @@
-import { useEffect, useState } from "react";
-import { getGif } from "../helpers/getGifs";
+import { useFetchGifs } from "../hooks/useFetchGifs";
 import { GifItem } from "./GifItem";
 
 
 export const TrgetaGig = ({ category }) => {
 
-    const [imagenes, setimagenes] = useState([])
-
-
-
-    useEffect(() => {
-        getGif(category)
-            .then(setimagenes)
-    }, [category])
-
+    
+    const {data:images, loading}=useFetchGifs(category)
 
     //peticion http a la api
 
@@ -21,9 +13,10 @@ export const TrgetaGig = ({ category }) => {
     return (
         <>
             <h3>{category}</h3>
-            <div className='cardPadre'>
+            {loading && <h2 className="animate__animated  animate__flash">Cargando.......</h2> } 
+            <div className='cardPadre animate__animated  animate__fadeIn'>
                 {
-                    imagenes.map(img => (
+                    images.map(img => (
                         <GifItem
                             key={img.id}
                             {...img}
